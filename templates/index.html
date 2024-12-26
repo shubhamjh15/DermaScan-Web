@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> <!-- Use url_for for static files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <div class="n1">
+            <img src="{{ url_for('static', filename='image.png') }}" alt="Logo">
+            <h2>DermaScan</h2>
+        </div>
+        <div class="nav-main">
+            <a href=""><h4>Home</h4></a>
+            <a href="#predictionSection"><h4>Image Upload</h4></a>
+            <a href=""><h4>Diseases</h4></a>
+            <a href=""><h4>Our Team</h4></a>
+        </div>
+        <div class="n2">
+            <h4>FAQs</h4>
+            <h4>Contact Us</h4>
+        </div>
+    </div>
+    <h1>Scroll down</h1>
+    <button id="go-to-top">Go to top</button>
+
+    <!-- Video Background -->
+    <video id="myVideo" autoplay loop muted preload="auto" src="{{ url_for('static', filename='video.mp4') }}"></video>
+    
+    <!-- Main Header Section -->
+    <div id="main">
+        <div id="page1">
+            <h1>Revolutionize Your <br><span>Healthcare Experience</span></h1>
+            <h4>Empowering You with Advanced AI Technology to Predict and Address Skin Concerns Before They Become Serious.</h4>
+            <button class="Nxt-Page" onclick="navigateToNextPage()">Get Started</button>
+        </div>
+        
+        
+    </div>
+
+
+
+
+    <div class="ht-Use">
+        <div class="upload-htu">
+            
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- Skin Disease Prediction Section   IMAGE UPLOAD SECTION-->
+    <div id="predictionSection" style="text-align: center; padding-top: 150px;">
+        <h1>Skin Disease Prediction</h1>
+        <form id="uploadForm" method="POST" enctype="multipart/form-data" style="margin: 20px 0;">
+            <label for="image" style="font-size: 18px;">Upload an image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required style="margin: 10px 0;">
+            <button type="submit" style="padding: 10px 20px; font-size: 16px;">Predict</button>
+        </form>
+
+        <div id="result" style="margin-top: 20px;"></div>
+
+        <button id="getRemedy" style="display: none; padding: 10px 20px;">Get Remedy</button>
+        <div id="remedyResult" style="display: none; margin-top: 20px;"></div>
+    </div>
+
+
+
+    <!-- Script for functionality -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>  <!-- Use url_for for static files -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
